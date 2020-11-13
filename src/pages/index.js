@@ -10,7 +10,7 @@ function Home({ countries }) {
     <div>
       <Layout>
         <div className={styles.count}>Found {countries.length} countries</div>
-        <SearchInput placeholder="Search Region, Country" />
+        <SearchInput placeholder="Filter by Name, Region, or Subregion" />
         <CountriesTable countries={countries} />
       </Layout>
     </div>
