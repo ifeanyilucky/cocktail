@@ -14,6 +14,9 @@
   flex: 1;
   padding: 20px;
   font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .row {
   display: flex;
@@ -40,5 +43,12 @@
 }
 
 .heading_name {
-  text-align: left;
+  justify-content: flex-start;
+}
+.heading_arrow {
+  color: var(--primary-color);
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-left: 2px;
 }
