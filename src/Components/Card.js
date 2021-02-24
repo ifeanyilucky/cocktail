@@ -1,11 +1,23 @@
 import styled from "styled-components";
-
+import Link from "next/link";
 export const Card = ({ drink }) => {
   return (
     <CardStyle className="col-md-4 py-3">
       <div className="cards ">
         <div className="cards__two"></div>
-        <img src={drink.strDrinkThumb} alt="metwgh" className="w-75" />
+        <Link
+          href={{
+            pathname: `/cocktails/${drink.idDrink}`,
+            state: { strDrink: drink.strDrink },
+          }}
+        >
+          <img
+            src={drink.strDrinkThumb}
+            alt={drink.strDrink}
+            className="w-75"
+          />
+        </Link>
+
         <div className="cards__title">
           <h5>
             {drink.strDrink < 20
@@ -39,6 +51,7 @@ const CardStyle = styled.div`
       margin-left: 15px;
       margin-top: 15px;
       z-index: 1;
+      cursor: pointer;
     }
     .cards__title {
       color: var(--primary-color);

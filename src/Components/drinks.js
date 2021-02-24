@@ -19,7 +19,7 @@ class Drinks extends Component {
     const data = await apiCall.json();
 
     this.setState({ drinks: data.drinks });
-    // console.log(this.state.drinks);
+    console.log(this.state.drinks);
   };
 
   render() {
