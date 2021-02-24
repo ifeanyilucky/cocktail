@@ -1,31 +1,35 @@
-import React from "react";
-import CountriesTable from "../components/CountriesTable/CountriesTable";
-import Layout from "../components/Layout/Layout";
-import SearchInput from "../components/SearchInput/SearchInput";
-import styles from "../styles/Home.module.css";
+import Drinks from "../Components/drinks";
+import Layout from "../Components/Layout";
+import styled from "styled-components";
 
-function Home({ countries }) {
-  // console.log(countries);
+const Index = () => {
   return (
-    <div>
-      <Layout>
-        <div className={styles.count}>Found {countries.length} countries</div>
-        <SearchInput placeholder="Filter by Name, Region, or Subregion" />
-        <CountriesTable countries={countries} />
-      </Layout>
-    </div>
+    <Layout>
+      <div className="hero">
+        <div className="row container">
+          <div className="col-xl-6">
+            <div className="heroText">
+              <h3 className="hero__subHead">We are</h3>
+              <h1 className="hero__header">HazyOwl</h1>
+              <p className="subTitle">
+                Classic Irish Pub in the heard of the East Village, Manhattan, a
+                great place to catch the game with solid drink prices, Ideal for
+                those wanting to meet up with friends to chill, have a drink in
+                a proper New York bar, and watch a bit of sports.
+              </p>
+              <a href="#search">
+                <button className="golden-btn">Get started</button>
+              </a>
+            </div>
+          </div>
+          <div />
+        </div>
+      </div>
+      <section id="search">
+        <Drinks />
+      </section>
+    </Layout>
   );
-}
-
-export const getStaticProps = async () => {
-  const countryData = `https://restcountries.eu/rest/v2/`;
-  const res = await fetch(countryData);
-  const countries = await res.json();
-  return {
-    props: {
-      countries,
-    },
-  };
 };
 
-export default Home;
+export default Index;
