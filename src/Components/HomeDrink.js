@@ -39,12 +39,12 @@ export class HomeDrink extends Component {
               .slice(0, this.state.visible)
               .map((drink) => <Card drink={drink} />)
           ) : (
-            <div className="col-5 mx-auto">
+            <div className="col-12 mx-auto">
               <Loading />
             </div>
           )}
         </div>
-        <div className="col-5 mx-auto py-5 block center">
+        <div className="col-10 mx-auto py-5">
           <button className="golden-btn" onClick={this.loadMore}>
             Load more
           </button>

@@ -25,31 +25,31 @@ class Drinks extends Component {
   render() {
     return (
       <Drink>
-        <div className="col-10 mx-auto">
+        <div className="col-12 mx-auto">
           <div className="py-4 text-capitalize">
             <h1>Our Drinks</h1>{" "}
-            <p className="mx-auto col-7 text-center">
+            <p className="mx-auto col-xl-7 text-center">
               Researchers in Scotland find that drinking is an important element
               of the young adult social experience. Group settings can make
               binge-drinking seem normal and like a rite of passage.
             </p>
           </div>
-
-          <Form getWord={this.getWord} />
-          <div>
-            <ul>
-              {this.state.drinks.map((drink) => (
-                <li key={drink.idDrink}>
-                  <h1>{drink.strDrink}</h1>
-                  <img src={drink.strDrinkThumb} alt={drink.idDrink} />
-                  <span style={{ color: "rebeccapurple" }}>
-                    {drink.strAlcoholic}
-                  </span>
-                </li>
-              ))}
-            </ul>
+          <div className="col-12 mx-auto col-md-9">
+            <Form getWord={this.getWord} />
+            <div>
+              <ul>
+                {this.state.drinks.map((drink) => (
+                  <li key={drink.idDrink}>
+                    <h1>{drink.strDrink}</h1>
+                    <img src={drink.strDrinkThumb} alt={drink.idDrink} />
+                    <span style={{ color: "rebeccapurple" }}>
+                      {drink.strAlcoholic}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
-
           <HomeDrink />
         </div>
       </Drink>

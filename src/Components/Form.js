@@ -29,9 +29,10 @@ const Search = styled.div`
     border-radius: 8px;
     padding: 16px;
   }
-  input::placeholder {
+  /* input::placeholder {
     color: #b3c5cd;
-  }
+  } */
+
   .input__wrapper {
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
     background-color: #2b1600;
@@ -40,6 +41,11 @@ const Search = styled.div`
     align-items: center;
     border-radius: 8px;
     padding-left: 16px;
+    border: 2px solid transparent;
+    &:hover {
+      border: 2px solid var(--primary-color);
+      background-color: transparent;
+    }
   }
   .srchBtn {
     background-color: var(--primary-color);
